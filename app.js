@@ -345,7 +345,7 @@ function renderCountryCards() {
     cardsHTML += `
       <div class="country-card ${isFav ? 'is-favorite' : ''}" data-id="${country.cca3}">
         <div class="card-flag-wrapper" onclick="openDetailsModal('${country.cca3}')">
-          <img src="${country.flags.svg || country.flags.png}" alt="Flag of ${country.name.common}" class="card-flag" loading="lazy">
+          <img src="${country.flags.svg || country.flags.png}" alt="Flag of ${country.name.common}" class="card-flag" loading="lazy" onerror="this.onerror=null;this.src='${country.flags.png}'">
         </div>
         
         <button class="card-fav-btn" onclick="event.stopPropagation(); window.toggleFav('${country.cca3}')" aria-label="Favorite ${country.name.common}">
