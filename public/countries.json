@@ -1,0 +1,171 @@
+[
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Canada"
+    },
+    "capital": ["Ottawa"],
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 38008005,
+    "flags": {
+      "png": "https://flagcdn.com/w320/ca.png",
+      "svg": "https://flagcdn.com/images/ca.svg",
+      "emoji": "🇨🇦"
+    },
+    "languages": {
+      "eng": "English",
+      "fra": "French"
+    },
+    "currencies": {
+      "CAD": {
+        "name": "Canadian dollar",
+        "symbol": "$"
+      }
+    },
+    "cca3": "CAN",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/1428125"
+    }
+  },
+  {
+    "name": {
+      "common": "Japan",
+      "official": "Japan"
+    },
+    "capital": ["Tokyo"],
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 125836021,
+    "flags": {
+      "png": "https://flagcdn.com/w320/jp.png",
+      "svg": "https://flagcdn.com/images/jp.svg",
+      "emoji": "🇯🇵"
+    },
+    "languages": {
+      "jpn": "Japanese"
+    },
+    "currencies": {
+      "JPY": {
+        "name": "Japanese yen",
+        "symbol": "¥"
+      }
+    },
+    "cca3": "JPN",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/382313"
+    }
+  },
+  {
+    "name": {
+      "common": "France",
+      "official": "French Republic"
+    },
+    "capital": ["Paris"],
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 67391582,
+    "flags": {
+      "png": "https://flagcdn.com/w320/fr.png",
+      "svg": "https://flagcdn.com/images/fr.svg",
+      "emoji": "🇫🇷"
+    },
+    "languages": {
+      "fra": "French"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "cca3": "FRA",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/73562"
+    }
+  },
+  {
+    "name": {
+      "common": "Australia",
+      "official": "Commonwealth of Australia"
+    },
+    "capital": ["Canberra"],
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 25687041,
+    "flags": {
+      "png": "https://flagcdn.com/w320/au.png",
+      "svg": "https://flagcdn.com/images/au.svg",
+      "emoji": "🇦🇺"
+    },
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AUD": {
+        "name": "Australian dollar",
+        "symbol": "$"
+      }
+    },
+    "cca3": "AUS",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/80500"
+    }
+  },
+  {
+    "name": {
+      "common": "Germany",
+      "official": "Federal Republic of Germany"
+    },
+    "capital": ["Berlin"],
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 83240525,
+    "flags": {
+      "png": "https://flagcdn.com/w320/de.png",
+      "svg": "https://flagcdn.com/images/de.svg",
+      "emoji": "🇩🇪"
+    },
+    "languages": {
+      "deu": "German"
+    },
+    "currencies": {
+      "EUR": {
+        "name": "Euro",
+        "symbol": "€"
+      }
+    },
+    "cca3": "DEU",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/51477"
+    }
+  },
+  {
+    "name": {
+      "common": "Brazil",
+      "official": "Federative Republic of Brazil"
+    },
+    "capital": ["Brasília"],
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 212559409,
+    "flags": {
+      "png": "https://flagcdn.com/w320/br.png",
+      "svg": "https://flagcdn.com/images/br.svg",
+      "emoji": "🇧🇷"
+    },
+    "languages": {
+      "por": "Portuguese"
+    },
+    "currencies": {
+      "BRL": {
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    },
+    "cca3": "BRA",
+    "maps": {
+      "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
+    }
+  }
+]

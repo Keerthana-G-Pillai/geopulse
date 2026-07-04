@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoPulse | Interactive World Explorer & Narrator</title>
+  <meta name="description" content="An interactive global explorer utilizing Fetch, Web Speech, and LocalStorage APIs with a glassmorphic dashboard design.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="logo-icon">
+          <i data-lucide="globe" class="pulse-icon"></i>
+        </div>
+        <div>
+          <h1>GeoPulse</h1>
+          <p class="subtitle">Global Explorer & Narrator</p>
+        </div>
+      </div>
+      
+      <!-- Stats & Quick Actions -->
+      <div class="header-actions">
+        <div class="quick-stat">
+          <i data-lucide="star" class="stat-icon yellow"></i>
+          <span id="stat-favorites">0 Favorites</span>
+        </div>
+        <div class="quick-stat narration-status" id="narration-status">
+          <div class="status-indicator"></div>
+          <i data-lucide="volume-2" class="stat-icon"></i>
+          <span id="speech-status-text">Speech Idle</span>
+        </div>
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-layout">
+      
+      <!-- Sidebar / Sidebar Controls -->
+      <aside class="sidebar">
+        
+        <!-- Search & Filter Panel -->
+        <section class="panel search-panel">
+          <h2><i data-lucide="sliders-horizontal"></i> Filters & Sort</h2>
+          
+          <div class="control-group">
+            <label for="search-input">Search Countries</label>
+            <div class="search-wrapper">
+              <i data-lucide="search" class="search-icon"></i>
+              <input type="text" id="search-input" placeholder="e.g. France, Tokyo, Peru...">
+              <button id="search-clear" class="btn-clear" aria-label="Clear search">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="control-row">
+            <div class="control-group half">
+              <label for="region-select">Region</label>
+              <select id="region-select">
+                <option value="all">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+              </select>
+            </div>
+            
+            <div class="control-group half">
+              <label for="sort-select">Sort By</label>
+              <select id="sort-select">
+                <option value="name-asc">Name (A-Z)</option>
+                <option value="name-desc">Name (Z-A)</option>
+                <option value="pop-desc">Population (High-Low)</option>
+                <option value="pop-asc">Population (Low-High)</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Speech Settings Panel -->
+        <section class="panel speech-settings-panel">
+          <h2><i data-lucide="settings-2"></i> Speech Settings</h2>
+          
+          <div class="control-group">
+            <label for="voice-select">Narration Voice</label>
+            <select id="voice-select">
+              <!-- Dynamically populated -->
+              <option value="">Loading voices...</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <div class="slider-label-row">
+              <label for="rate-range">Speech Speed</label>
+              <span id="rate-val">1.0x</span>
+            </div>
+            <input type="range" id="rate-range" min="0.5" max="2" step="0.1" value="1.0" class="slider">
+          </div>
+
+          <div class="control-group">
+            <div class="slider-label-row">
+              <label for="pitch-range">Pitch</label>
+              <span id="pitch-val">1.0</span>
+            </div>
+            <input type="range" id="pitch-range" min="0.5" max="1.5" step="0.1" value="1.0" class="slider">
+          </div>
+
+          <div class="speech-controls-row">
+            <button id="speech-stop-btn" class="btn btn-secondary btn-full" disabled>
+              <i data-lucide="square"></i> Stop Narration
+            </button>
+          </div>
+        </section>
+
+        <!-- Favorites Shelf -->
+        <section class="panel favorites-panel">
+          <h2><i data-lucide="star"></i> Favorite Shelf</h2>
+          <div id="favorites-shelf-list" class="favorites-shelf-list">
+            <!-- Dynamically populated or empty state -->
+            <div class="empty-shelf">
+              <i data-lucide="folder-heart"></i>
+              <p>No favorites saved yet.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main Country Feed -->
+      <main class="content-feed">
+        <!-- Dashboard Status Info -->
+        <div class="feed-header">
+          <div class="feed-info">
+            <span id="showing-count" class="badge">Loading countries...</span>
+            <span id="filter-tag" class="badge-accent hidden">All</span>
+          </div>
+        </div>
+
+        <!-- Grid of Cards -->
+        <div id="countries-grid" class="countries-grid">
+          <!-- Dynamically populated cards -->
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Fetching global country archives...</p>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+      
+      <div id="modal-body-content">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
