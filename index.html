@@ -28,10 +28,14 @@
     <!-- Header -->
     <header class="app-header">
       <div class="header-brand">
+        <!-- Mobile: hamburger to open sidebar -->
+        <button id="sidebar-toggle" class="btn-icon sidebar-toggle-btn" aria-label="Toggle Filters">
+          <i data-lucide="menu"></i>
+        </button>
         <div class="logo-icon">
           <i data-lucide="globe" class="pulse-icon"></i>
         </div>
-        <div>
+        <div class="brand-text">
           <h1>GeoPulse</h1>
           <p class="subtitle">Global Explorer & Narrator</p>
         </div>
@@ -39,15 +43,18 @@
       
       <!-- Stats & Quick Actions -->
       <div class="header-actions">
-        <div class="quick-stat">
+        <div class="quick-stat hide-mobile">
           <i data-lucide="star" class="stat-icon yellow"></i>
           <span id="stat-favorites">0 Favorites</span>
         </div>
-        <div class="quick-stat narration-status" id="narration-status">
+        <div class="quick-stat narration-status hide-mobile" id="narration-status">
           <div class="status-indicator"></div>
           <i data-lucide="volume-2" class="stat-icon"></i>
           <span id="speech-status-text">Speech Idle</span>
         </div>
+        <button id="about-btn" class="btn-icon" aria-label="About GeoPulse">
+          <i data-lucide="info"></i>
+        </button>
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
           <i data-lucide="moon" class="icon-moon"></i>
           <i data-lucide="sun" class="icon-sun"></i>
@@ -55,11 +62,32 @@
       </div>
     </header>
 
+    <!-- Mobile narration status bar -->
+    <div class="mobile-status-bar hide-desktop">
+      <div class="quick-stat narration-status" id="narration-status-mobile">
+        <div class="status-indicator"></div>
+        <i data-lucide="volume-2" class="stat-icon"></i>
+        <span id="speech-status-text-mobile">Speech Idle</span>
+      </div>
+      <div class="quick-stat">
+        <i data-lucide="star" class="stat-icon yellow"></i>
+        <span id="stat-favorites-mobile">0 Favorites</span>
+      </div>
+    </div>
+
     <!-- Main Content -->
     <div class="main-layout">
+
+      <!-- Sidebar overlay (mobile) -->
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
       
       <!-- Sidebar / Sidebar Controls -->
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
+
+        <!-- Close button (mobile only) -->
+        <button class="sidebar-close-btn btn-icon hide-desktop" id="sidebar-close" aria-label="Close filters">
+          <i data-lucide="x"></i>
+        </button>
         
         <!-- Search & Filter Panel -->
         <section class="panel search-panel">
@@ -108,7 +136,6 @@
           <div class="control-group">
             <label for="voice-select">Narration Voice</label>
             <select id="voice-select">
-              <!-- Dynamically populated -->
               <option value="">Loading voices...</option>
             </select>
           </div>
@@ -140,7 +167,6 @@
         <section class="panel favorites-panel">
           <h2><i data-lucide="star"></i> Favorite Shelf</h2>
           <div id="favorites-shelf-list" class="favorites-shelf-list">
-            <!-- Dynamically populated or empty state -->
             <div class="empty-shelf">
               <i data-lucide="folder-heart"></i>
               <p>No favorites saved yet.</p>
@@ -161,7 +187,6 @@
 
         <!-- Grid of Cards -->
         <div id="countries-grid" class="countries-grid">
-          <!-- Dynamically populated cards -->
           <div class="loading-state">
             <div class="spinner"></div>
             <p>Fetching global country archives...</p>
@@ -179,9 +204,99 @@
       <button class="modal-close" id="modal-close" aria-label="Close modal">
         <i data-lucide="x"></i>
       </button>
-      
-      <div id="modal-body-content">
-        <!-- Loaded dynamically -->
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <div class="modal-backdrop" id="about-backdrop"></div>
+    <div class="modal-content about-modal-content">
+      <button class="modal-close" id="about-modal-close" aria-label="Close about">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="about-body">
+
+        <!-- Hero -->
+        <div class="about-hero">
+          <div class="about-logo">
+            <i data-lucide="globe"></i>
+          </div>
+          <h2 id="about-title">GeoPulse</h2>
+          <p class="about-tagline">Interactive World Explorer & Narrator</p>
+          <span class="about-version-badge">v0.1.0</span>
+        </div>
+
+        <!-- Description -->
+        <div class="about-section">
+          <p class="about-desc">
+            GeoPulse is a front-end web app that lets you explore, search, and listen to facts about countries around the world — no backend, no API keys, completely self-contained.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="about-section">
+          <h3 class="about-section-title"><i data-lucide="zap"></i> Features</h3>
+          <ul class="about-feature-list">
+            <li><i data-lucide="search"></i> Search & filter countries by name, capital, or region</li>
+            <li><i data-lucide="volume-2"></i> Text-to-speech narration using the Web Speech API</li>
+            <li><i data-lucide="star"></i> Favorite shelf persisted with LocalStorage</li>
+            <li><i data-lucide="moon"></i> Dark / Light theme with persistent preference</li>
+            <li><i data-lucide="map"></i> Quick link to OpenStreetMaps for every country</li>
+            <li><i data-lucide="sliders-horizontal"></i> Sort by name or population</li>
+          </ul>
+        </div>
+
+        <!-- Web APIs used -->
+        <div class="about-section">
+          <h3 class="about-section-title"><i data-lucide="code-2"></i> Web APIs Used</h3>
+          <div class="about-api-grid">
+            <div class="about-api-chip">
+              <i data-lucide="wifi"></i>
+              <span>Fetch API</span>
+            </div>
+            <div class="about-api-chip">
+              <i data-lucide="mic"></i>
+              <span>Web Speech API</span>
+            </div>
+            <div class="about-api-chip">
+              <i data-lucide="database"></i>
+              <span>LocalStorage API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech stack -->
+        <div class="about-section">
+          <h3 class="about-section-title"><i data-lucide="layers"></i> Built With</h3>
+          <div class="about-api-grid">
+            <div class="about-api-chip">
+              <i data-lucide="file-code"></i>
+              <span>Vanilla JS</span>
+            </div>
+            <div class="about-api-chip">
+              <i data-lucide="palette"></i>
+              <span>CSS Variables</span>
+            </div>
+            <div class="about-api-chip">
+              <i data-lucide="box"></i>
+              <span>Vite</span>
+            </div>
+            <div class="about-api-chip">
+              <i data-lucide="pen-tool"></i>
+              <span>Lucide Icons</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="about-footer">
+          <p>Made with <span style="color: var(--color-danger);">♥</span> by <strong>Keerthana G Pillai</strong></p>
+          <a href="https://github.com/Keerthana-G-Pillai/geopulse-" target="_blank" rel="noopener" class="about-github-link">
+            <i data-lucide="github"></i> View on GitHub
+          </a>
+        </div>
+
       </div>
     </div>
   </div>

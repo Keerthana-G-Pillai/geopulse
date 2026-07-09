@@ -232,33 +232,36 @@ const FetchController = {
 function applySettingsUI() {
   // Apply Theme
   document.documentElement.setAttribute('data-theme', state.settings.theme);
-  const themeToggle = document.getElementById('theme-toggle');
-  
+
   // Set controls initial values
   document.getElementById('rate-range').value = state.settings.speechRate;
   document.getElementById('rate-val').textContent = `${state.settings.speechRate.toFixed(1)}x`;
-  
+
   document.getElementById('pitch-range').value = state.settings.speechPitch;
   document.getElementById('pitch-val').textContent = state.settings.speechPitch.toFixed(1);
 }
 
-// Update the narration status bar and badges
+// Update the narration status bar and badges (desktop + mobile)
 function updateSpeechUI(isSpeaking, countryName = '') {
-  const statusContainer = document.getElementById('narration-status');
-  const statusText = document.getElementById('speech-status-text');
+  const desktopStatus = document.getElementById('narration-status');
+  const mobileStatus = document.getElementById('narration-status-mobile');
+  const desktopText = document.getElementById('speech-status-text');
+  const mobileText = document.getElementById('speech-status-text-mobile');
   const stopButton = document.getElementById('speech-stop-btn');
 
-  if (isSpeaking) {
-    statusContainer.classList.add('speaking');
-    statusText.textContent = `Narrating ${countryName}`;
-    stopButton.removeAttribute('disabled');
-  } else {
-    statusContainer.classList.remove('speaking');
-    statusText.textContent = 'Speech Idle';
-    stopButton.setAttribute('disabled', 'true');
+  const label = isSpeaking ? `Narrating ${countryName}` : 'Speech Idle';
+
+  [desktopStatus, mobileStatus].forEach(el => {
+    if (!el) return;
+    if (isSpeaking) { el.classList.add('speaking'); } else { el.classList.remove('speaking'); }
+  });
+
+  if (desktopText) desktopText.textContent = label;
+  if (mobileText) mobileText.textContent = label;
+  if (stopButton) {
+    if (isSpeaking) { stopButton.removeAttribute('disabled'); } else { stopButton.setAttribute('disabled', 'true'); }
   }
 
-  // Rerender grids to update speaker icon animations
   renderCountryCards();
 }
 
@@ -310,6 +313,11 @@ function toggleFavorite(cca3) {
   }
 
   StorageController.saveFavorites();
+  // sync mobile favorites badge
+  const mobileFavBadge = document.getElementById('stat-favorites-mobile');
+  if (mobileFavBadge) {
+    mobileFavBadge.textContent = `${state.favorites.length} Favorite${state.favorites.length === 1 ? '' : 's'}`;
+  }
   renderFavoritesShelf();
   renderCountryCards();
 }
@@ -602,6 +610,41 @@ function filterAndSortCountries() {
 
 // --- App Event Hookups ---
 function setupEventListeners() {
+  // Sidebar toggle (mobile)
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const sidebar = document.getElementById('sidebar');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    sidebarOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
+  if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+  if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+
+  // About modal
+  const aboutBtn = document.getElementById('about-btn');
+  const aboutModal = document.getElementById('about-modal');
+  const aboutBackdrop = document.getElementById('about-backdrop');
+  const aboutClose = document.getElementById('about-modal-close');
+
+  function openAbout() { aboutModal.classList.add('active'); }
+  function closeAbout() { aboutModal.classList.remove('active'); }
+
+  if (aboutBtn) aboutBtn.addEventListener('click', openAbout);
+  if (aboutClose) aboutClose.addEventListener('click', closeAbout);
+  if (aboutBackdrop) aboutBackdrop.addEventListener('click', closeAbout);
+
   // Theme Toggle
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', () => {
@@ -679,6 +722,12 @@ function setupEventListeners() {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeDetailsModal();
+      const aboutModal = document.getElementById('about-modal');
+      if (aboutModal) aboutModal.classList.remove('active');
+      const sidebar = document.getElementById('sidebar');
+      const sidebarOverlay = document.getElementById('sidebar-overlay');
+      if (sidebar) { sidebar.classList.remove('open'); document.body.style.overflow = ''; }
+      if (sidebarOverlay) sidebarOverlay.classList.remove('active');
     }
   });
 }
