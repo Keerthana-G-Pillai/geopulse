@@ -5,7 +5,7 @@
    ========================================================================== */
 
 // ── Constants ────────────────────────────────────────────────────────────────
-const API_URL = 'https://restcountries.com/v3.1/all?fields=name,capital,region,subregion,population,flags,languages,currencies,cca3,maps';
+const API_URL = '/api/v3.1/all?fields=name,capital,region,subregion,population,flags,languages,currencies,cca3,maps';
 const LS_FAV_KEY      = 'geopulse_favorites';
 const LS_SETTINGS_KEY = 'geopulse_settings';
 
