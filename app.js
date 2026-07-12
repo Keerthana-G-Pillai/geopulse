@@ -199,8 +199,7 @@ function updateSpeechUI(isSpeaking, name = '') {
     if (el) el.textContent = label;
   });
   const btn = document.getElementById('speech-stop-btn');
-  if (btn) btn.disabled = !isSpeaking;
-  renderCards();
+  if (btn) btn.disabled = !isSpeaking;  renderCards();
 }
 
 // ── Favorites ─────────────────────────────────────────────────────────────────
@@ -494,7 +493,6 @@ function setupEventListeners() {
     SpeechController.cancel();
     showToast('Narration stopped.', 'info');
   });
-
   // Detail modal close
   document.getElementById('modal-close')?.addEventListener('click', closeDetailsModal);
   document.getElementById('modal-backdrop')?.addEventListener('click', closeDetailsModal);
