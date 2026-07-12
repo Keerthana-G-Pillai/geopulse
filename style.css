@@ -1118,6 +1118,11 @@ select option { background-color: #12121c; color: #fff; }
 
 .about-footer p { font-size: 0.85rem; color: var(--text-secondary); }
 .about-footer strong { color: var(--text-primary); }
+.about-course-note {
+  font-size: 0.75rem !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
 
 .about-github-link {
   display: inline-flex;
