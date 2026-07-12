@@ -932,6 +932,25 @@ select option { background-color: #12121c; color: #fff; }
 .modal-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 .modal-actions .btn { flex: 1; min-width: 120px; }
 
+.btn-map-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+.btn-map-link:hover { border-color: var(--color-primary); background: var(--color-primary-glow); }
+
 /* ── About Modal ── */
 .about-modal-content { max-width: 500px; }
 
