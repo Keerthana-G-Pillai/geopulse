@@ -83,26 +83,31 @@ const StorageController = {
 // ── Fetch API ─────────────────────────────────────────────────────────────────
 const FetchController = {
   async fetchCountries() {
-    let data = null;
-
-    // Try live API via Vite proxy first
+    // 1. Try Vite proxy → RestCountries live API
     try {
-      const res = await fetch(API_PROXY_URL);
+      const res  = await fetch(API_PROXY_URL);
       const text = await res.text();
-      // Guard: make sure we got JSON not an HTML error page
-      if (!res.ok || text.trim().startsWith('<')) throw new Error('Non-JSON response from proxy');
-      data = JSON.parse(text);
-    } catch (proxyErr) {
-      console.warn('Proxy fetch failed, falling back to local data:', proxyErr.message);
-      // Fallback to bundled local JSON
-      const res = await fetch(API_LOCAL_URL);
-      if (!res.ok) throw new Error(`Local fallback failed: HTTP ${res.status}`);
-      data = await res.json();
+      if (res.ok && !text.trim().startsWith('<')) {
+        const data = JSON.parse(text);
+        state.countries = data;
+        state.filtered  = [...data];
+        return data;
+      }
+    } catch (e) {
+      console.warn('Live API unavailable, using local data.', e.message);
     }
 
-    state.countries = data;
-    state.filtered  = [...data];
-    return data;
+    // 2. Fallback to bundled local JSON — always works offline
+    try {
+      const res  = await fetch(API_LOCAL_URL);
+      const data = await res.json();
+      state.countries = data;
+      state.filtered  = [...data];
+      return data;
+    } catch (e) {
+      console.error('Local JSON also failed:', e.message);
+      throw e; // only throw if BOTH fail
+    }
   }
 };
 
@@ -512,19 +517,18 @@ async function initApp() {
   SpeechController.init();
   setupEventListeners();
 
-  const grid = document.getElementById('countries-grid');
-
   try {
     await FetchController.fetchCountries();
     filterAndSort();
     showToast(`Loaded ${state.countries.length} countries.`, 'success');
   } catch (err) {
-    console.error(err);
+    console.error('fetchCountries failed completely:', err);
+    const grid = document.getElementById('countries-grid');
     if (grid) {
       grid.innerHTML = `
         <div class="loading-state">
           <i data-lucide="wifi-off" style="width:48px;height:48px;stroke-width:1.5;color:var(--color-danger)"></i>
-          <p>Failed to load country data. Check your connection.</p>
+          <p>Could not load country data.<br><small style="color:var(--text-muted)">${err.message}</small></p>
           <button class="btn" style="margin-top:12px;background:var(--color-primary);color:#fff"
                   onclick="location.reload()">Retry</button>
         </div>`;
