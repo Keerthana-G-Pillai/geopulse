@@ -1,171 +1,63 @@
 [
-  {
-    "name": {
-      "common": "Canada",
-      "official": "Canada"
-    },
-    "capital": ["Ottawa"],
-    "region": "Americas",
-    "subregion": "North America",
-    "population": 38008005,
-    "flags": {
-      "png": "https://flagcdn.com/w320/ca.png",
-      "svg": "https://flagcdn.com/ca.svg",
-      "emoji": "🇨🇦"
-    },
-    "languages": {
-      "eng": "English",
-      "fra": "French"
-    },
-    "currencies": {
-      "CAD": {
-        "name": "Canadian dollar",
-        "symbol": "$"
-      }
-    },
-    "cca3": "CAN",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/1428125"
-    }
-  },
-  {
-    "name": {
-      "common": "Japan",
-      "official": "Japan"
-    },
-    "capital": ["Tokyo"],
-    "region": "Asia",
-    "subregion": "Eastern Asia",
-    "population": 125836021,
-    "flags": {
-      "png": "https://flagcdn.com/w320/jp.png",
-      "svg": "https://flagcdn.com/jp.svg",
-      "emoji": "🇯🇵"
-    },
-    "languages": {
-      "jpn": "Japanese"
-    },
-    "currencies": {
-      "JPY": {
-        "name": "Japanese yen",
-        "symbol": "¥"
-      }
-    },
-    "cca3": "JPN",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/382313"
-    }
-  },
-  {
-    "name": {
-      "common": "France",
-      "official": "French Republic"
-    },
-    "capital": ["Paris"],
-    "region": "Europe",
-    "subregion": "Western Europe",
-    "population": 67391582,
-    "flags": {
-      "png": "https://flagcdn.com/w320/fr.png",
-      "svg": "https://flagcdn.com/fr.svg",
-      "emoji": "🇫🇷"
-    },
-    "languages": {
-      "fra": "French"
-    },
-    "currencies": {
-      "EUR": {
-        "name": "Euro",
-        "symbol": "€"
-      }
-    },
-    "cca3": "FRA",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/73562"
-    }
-  },
-  {
-    "name": {
-      "common": "Australia",
-      "official": "Commonwealth of Australia"
-    },
-    "capital": ["Canberra"],
-    "region": "Oceania",
-    "subregion": "Australia and New Zealand",
-    "population": 25687041,
-    "flags": {
-      "png": "https://flagcdn.com/w320/au.png",
-      "svg": "https://flagcdn.com/au.svg",
-      "emoji": "🇦🇺"
-    },
-    "languages": {
-      "eng": "English"
-    },
-    "currencies": {
-      "AUD": {
-        "name": "Australian dollar",
-        "symbol": "$"
-      }
-    },
-    "cca3": "AUS",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/80500"
-    }
-  },
-  {
-    "name": {
-      "common": "Germany",
-      "official": "Federal Republic of Germany"
-    },
-    "capital": ["Berlin"],
-    "region": "Europe",
-    "subregion": "Western Europe",
-    "population": 83240525,
-    "flags": {
-      "png": "https://flagcdn.com/w320/de.png",
-      "svg": "https://flagcdn.com/de.svg",
-      "emoji": "🇩🇪"
-    },
-    "languages": {
-      "deu": "German"
-    },
-    "currencies": {
-      "EUR": {
-        "name": "Euro",
-        "symbol": "€"
-      }
-    },
-    "cca3": "DEU",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/51477"
-    }
-  },
-  {
-    "name": {
-      "common": "Brazil",
-      "official": "Federative Republic of Brazil"
-    },
-    "capital": ["Brasília"],
-    "region": "Americas",
-    "subregion": "South America",
-    "population": 212559409,
-    "flags": {
-      "png": "https://flagcdn.com/w320/br.png",
-      "svg": "https://flagcdn.com/br.svg",
-      "emoji": "🇧🇷"
-    },
-    "languages": {
-      "por": "Portuguese"
-    },
-    "currencies": {
-      "BRL": {
-        "name": "Brazilian real",
-        "symbol": "R$"
-      }
-    },
-    "cca3": "BRA",
-    "maps": {
-      "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
-    }
-  }
+  {"name":{"common":"Afghanistan","official":"Islamic Emirate of Afghanistan"},"capital":["Kabul"],"region":"Asia","subregion":"Southern Asia","population":40218234,"flags":{"png":"https://flagcdn.com/w320/af.png","svg":"https://flagcdn.com/af.svg","emoji":"🇦🇫"},"languages":{"prs":"Dari","pus":"Pashto"},"currencies":{"AFN":{"name":"Afghan afghani","symbol":"؋"}},"cca3":"AFG","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/303427"}},
+  {"name":{"common":"Albania","official":"Republic of Albania"},"capital":["Tirana"],"region":"Europe","subregion":"Southeast Europe","population":2837743,"flags":{"png":"https://flagcdn.com/w320/al.png","svg":"https://flagcdn.com/al.svg","emoji":"🇦🇱"},"languages":{"sqi":"Albanian"},"currencies":{"ALL":{"name":"Albanian lek","symbol":"L"}},"cca3":"ALB","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/53292"}},
+  {"name":{"common":"Algeria","official":"People's Democratic Republic of Algeria"},"capital":["Algiers"],"region":"Africa","subregion":"Northern Africa","population":44700000,"flags":{"png":"https://flagcdn.com/w320/dz.png","svg":"https://flagcdn.com/dz.svg","emoji":"🇩🇿"},"languages":{"ara":"Arabic"},"currencies":{"DZD":{"name":"Algerian dinar","symbol":"د.ج"}},"cca3":"DZA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192756"}},
+  {"name":{"common":"Argentina","official":"Argentine Republic"},"capital":["Buenos Aires"],"region":"Americas","subregion":"South America","population":45376763,"flags":{"png":"https://flagcdn.com/w320/ar.png","svg":"https://flagcdn.com/ar.svg","emoji":"🇦🇷"},"languages":{"spa":"Spanish"},"currencies":{"ARS":{"name":"Argentine peso","symbol":"$"}},"cca3":"ARG","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/286393"}},
+  {"name":{"common":"Australia","official":"Commonwealth of Australia"},"capital":["Canberra"],"region":"Oceania","subregion":"Australia and New Zealand","population":25687041,"flags":{"png":"https://flagcdn.com/w320/au.png","svg":"https://flagcdn.com/au.svg","emoji":"🇦🇺"},"languages":{"eng":"English"},"currencies":{"AUD":{"name":"Australian dollar","symbol":"$"}},"cca3":"AUS","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/80500"}},
+  {"name":{"common":"Austria","official":"Republic of Austria"},"capital":["Vienna"],"region":"Europe","subregion":"Central Europe","population":9006398,"flags":{"png":"https://flagcdn.com/w320/at.png","svg":"https://flagcdn.com/at.svg","emoji":"🇦🇹"},"languages":{"deu":"German"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"AUT","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/16239"}},
+  {"name":{"common":"Bangladesh","official":"People's Republic of Bangladesh"},"capital":["Dhaka"],"region":"Asia","subregion":"Southern Asia","population":166303498,"flags":{"png":"https://flagcdn.com/w320/bd.png","svg":"https://flagcdn.com/bd.svg","emoji":"🇧🇩"},"languages":{"ben":"Bengali"},"currencies":{"BDT":{"name":"Bangladeshi taka","symbol":"৳"}},"cca3":"BGD","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/184640"}},
+  {"name":{"common":"Belgium","official":"Kingdom of Belgium"},"capital":["Brussels"],"region":"Europe","subregion":"Western Europe","population":11555997,"flags":{"png":"https://flagcdn.com/w320/be.png","svg":"https://flagcdn.com/be.svg","emoji":"🇧🇪"},"languages":{"deu":"German","fra":"French","nld":"Dutch"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"BEL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/52411"}},
+  {"name":{"common":"Bolivia","official":"Plurinational State of Bolivia"},"capital":["Sucre"],"region":"Americas","subregion":"South America","population":11673029,"flags":{"png":"https://flagcdn.com/w320/bo.png","svg":"https://flagcdn.com/bo.svg","emoji":"🇧🇴"},"languages":{"spa":"Spanish"},"currencies":{"BOB":{"name":"Bolivian boliviano","symbol":"Bs."}},"cca3":"BOL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/252645"}},
+  {"name":{"common":"Brazil","official":"Federative Republic of Brazil"},"capital":["Brasília"],"region":"Americas","subregion":"South America","population":212559409,"flags":{"png":"https://flagcdn.com/w320/br.png","svg":"https://flagcdn.com/br.svg","emoji":"🇧🇷"},"languages":{"por":"Portuguese"},"currencies":{"BRL":{"name":"Brazilian real","symbol":"R$"}},"cca3":"BRA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/59470"}}
+  ,{"name":{"common":"Canada","official":"Canada"},"capital":["Ottawa"],"region":"Americas","subregion":"Northern America","population":38008005,"flags":{"png":"https://flagcdn.com/w320/ca.png","svg":"https://flagcdn.com/ca.svg","emoji":"🇨🇦"},"languages":{"eng":"English","fra":"French"},"currencies":{"CAD":{"name":"Canadian dollar","symbol":"$"}},"cca3":"CAN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/1428125"}},
+  {"name":{"common":"Chile","official":"Republic of Chile"},"capital":["Santiago"],"region":"Americas","subregion":"South America","population":19116201,"flags":{"png":"https://flagcdn.com/w320/cl.png","svg":"https://flagcdn.com/cl.svg","emoji":"🇨🇱"},"languages":{"spa":"Spanish"},"currencies":{"CLP":{"name":"Chilean peso","symbol":"$"}},"cca3":"CHL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/167454"}},
+  {"name":{"common":"China","official":"People's Republic of China"},"capital":["Beijing"],"region":"Asia","subregion":"Eastern Asia","population":1402112000,"flags":{"png":"https://flagcdn.com/w320/cn.png","svg":"https://flagcdn.com/cn.svg","emoji":"🇨🇳"},"languages":{"zho":"Chinese"},"currencies":{"CNY":{"name":"Chinese yuan","symbol":"¥"}},"cca3":"CHN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/270056"}},
+  {"name":{"common":"Colombia","official":"Republic of Colombia"},"capital":["Bogotá"],"region":"Americas","subregion":"South America","population":50882891,"flags":{"png":"https://flagcdn.com/w320/co.png","svg":"https://flagcdn.com/co.svg","emoji":"🇨🇴"},"languages":{"spa":"Spanish"},"currencies":{"COP":{"name":"Colombian peso","symbol":"$"}},"cca3":"COL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/120027"}},
+  {"name":{"common":"Croatia","official":"Republic of Croatia"},"capital":["Zagreb"],"region":"Europe","subregion":"Southeast Europe","population":3871833,"flags":{"png":"https://flagcdn.com/w320/hr.png","svg":"https://flagcdn.com/hr.svg","emoji":"🇭🇷"},"languages":{"hrv":"Croatian"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"HRV","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/214885"}},
+  {"name":{"common":"Czech Republic","official":"Czech Republic"},"capital":["Prague"],"region":"Europe","subregion":"Central Europe","population":10900555,"flags":{"png":"https://flagcdn.com/w320/cz.png","svg":"https://flagcdn.com/cz.svg","emoji":"🇨🇿"},"languages":{"ces":"Czech"},"currencies":{"CZK":{"name":"Czech koruna","symbol":"Kč"}},"cca3":"CZE","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/51684"}},
+  {"name":{"common":"Denmark","official":"Kingdom of Denmark"},"capital":["Copenhagen"],"region":"Europe","subregion":"Northern Europe","population":5831404,"flags":{"png":"https://flagcdn.com/w320/dk.png","svg":"https://flagcdn.com/dk.svg","emoji":"🇩🇰"},"languages":{"dan":"Danish"},"currencies":{"DKK":{"name":"Danish krone","symbol":"kr"}},"cca3":"DNK","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/50046"}},
+  {"name":{"common":"Ecuador","official":"Republic of Ecuador"},"capital":["Quito"],"region":"Americas","subregion":"South America","population":17643060,"flags":{"png":"https://flagcdn.com/w320/ec.png","svg":"https://flagcdn.com/ec.svg","emoji":"🇪🇨"},"languages":{"spa":"Spanish"},"currencies":{"USD":{"name":"United States dollar","symbol":"$"}},"cca3":"ECU","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/108089"}},
+  {"name":{"common":"Egypt","official":"Arab Republic of Egypt"},"capital":["Cairo"],"region":"Africa","subregion":"Northern Africa","population":102334404,"flags":{"png":"https://flagcdn.com/w320/eg.png","svg":"https://flagcdn.com/eg.svg","emoji":"🇪🇬"},"languages":{"ara":"Arabic"},"currencies":{"EGP":{"name":"Egyptian pound","symbol":"£"}},"cca3":"EGY","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/1473947"}},
+  {"name":{"common":"Ethiopia","official":"Federal Democratic Republic of Ethiopia"},"capital":["Addis Ababa"],"region":"Africa","subregion":"Eastern Africa","population":117876227,"flags":{"png":"https://flagcdn.com/w320/et.png","svg":"https://flagcdn.com/et.svg","emoji":"🇪🇹"},"languages":{"amh":"Amharic"},"currencies":{"ETB":{"name":"Ethiopian birr","symbol":"Br"}},"cca3":"ETH","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192800"}}
+  ,{"name":{"common":"Finland","official":"Republic of Finland"},"capital":["Helsinki"],"region":"Europe","subregion":"Northern Europe","population":5530719,"flags":{"png":"https://flagcdn.com/w320/fi.png","svg":"https://flagcdn.com/fi.svg","emoji":"🇫🇮"},"languages":{"fin":"Finnish","swe":"Swedish"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"FIN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/54224"}},
+  {"name":{"common":"France","official":"French Republic"},"capital":["Paris"],"region":"Europe","subregion":"Western Europe","population":67391582,"flags":{"png":"https://flagcdn.com/w320/fr.png","svg":"https://flagcdn.com/fr.svg","emoji":"🇫🇷"},"languages":{"fra":"French"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"FRA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/73562"}},
+  {"name":{"common":"Germany","official":"Federal Republic of Germany"},"capital":["Berlin"],"region":"Europe","subregion":"Western Europe","population":83240525,"flags":{"png":"https://flagcdn.com/w320/de.png","svg":"https://flagcdn.com/de.svg","emoji":"🇩🇪"},"languages":{"deu":"German"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"DEU","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/51477"}},
+  {"name":{"common":"Ghana","official":"Republic of Ghana"},"capital":["Accra"],"region":"Africa","subregion":"Western Africa","population":31072940,"flags":{"png":"https://flagcdn.com/w320/gh.png","svg":"https://flagcdn.com/gh.svg","emoji":"🇬🇭"},"languages":{"eng":"English"},"currencies":{"GHS":{"name":"Ghanaian cedi","symbol":"₵"}},"cca3":"GHA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192781"}},
+  {"name":{"common":"Greece","official":"Hellenic Republic"},"capital":["Athens"],"region":"Europe","subregion":"Southeast Europe","population":10715549,"flags":{"png":"https://flagcdn.com/w320/gr.png","svg":"https://flagcdn.com/gr.svg","emoji":"🇬🇷"},"languages":{"ell":"Greek"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"GRC","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192307"}},
+  {"name":{"common":"India","official":"Republic of India"},"capital":["New Delhi"],"region":"Asia","subregion":"Southern Asia","population":1380004385,"flags":{"png":"https://flagcdn.com/w320/in.png","svg":"https://flagcdn.com/in.svg","emoji":"🇮🇳"},"languages":{"eng":"English","hin":"Hindi"},"currencies":{"INR":{"name":"Indian rupee","symbol":"₹"}},"cca3":"IND","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/304716"}},
+  {"name":{"common":"Indonesia","official":"Republic of Indonesia"},"capital":["Jakarta"],"region":"Asia","subregion":"South-Eastern Asia","population":273523621,"flags":{"png":"https://flagcdn.com/w320/id.png","svg":"https://flagcdn.com/id.svg","emoji":"🇮🇩"},"languages":{"ind":"Indonesian"},"currencies":{"IDR":{"name":"Indonesian rupiah","symbol":"Rp"}},"cca3":"IDN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/304751"}},
+  {"name":{"common":"Iran","official":"Islamic Republic of Iran"},"capital":["Tehran"],"region":"Asia","subregion":"Southern Asia","population":83992949,"flags":{"png":"https://flagcdn.com/w320/ir.png","svg":"https://flagcdn.com/ir.svg","emoji":"🇮🇷"},"languages":{"fas":"Persian"},"currencies":{"IRR":{"name":"Iranian rial","symbol":"﷼"}},"cca3":"IRN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/304938"}},
+  {"name":{"common":"Iraq","official":"Republic of Iraq"},"capital":["Baghdad"],"region":"Asia","subregion":"Western Asia","population":40222493,"flags":{"png":"https://flagcdn.com/w320/iq.png","svg":"https://flagcdn.com/iq.svg","emoji":"🇮🇶"},"languages":{"ara":"Arabic","kur":"Kurdish"},"currencies":{"IQD":{"name":"Iraqi dinar","symbol":"ع.د"}},"cca3":"IRQ","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/304934"}},
+  {"name":{"common":"Ireland","official":"Republic of Ireland"},"capital":["Dublin"],"region":"Europe","subregion":"Northern Europe","population":4994724,"flags":{"png":"https://flagcdn.com/w320/ie.png","svg":"https://flagcdn.com/ie.svg","emoji":"🇮🇪"},"languages":{"eng":"English","gle":"Irish"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"IRL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/62273"}}
+  ,{"name":{"common":"Israel","official":"State of Israel"},"capital":["Jerusalem"],"region":"Asia","subregion":"Western Asia","population":9216900,"flags":{"png":"https://flagcdn.com/w320/il.png","svg":"https://flagcdn.com/il.svg","emoji":"🇮🇱"},"languages":{"ara":"Arabic","heb":"Hebrew"},"currencies":{"ILS":{"name":"Israeli new shekel","symbol":"₪"}},"cca3":"ISR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/1473946"}},
+  {"name":{"common":"Italy","official":"Italian Republic"},"capital":["Rome"],"region":"Europe","subregion":"Southern Europe","population":59554023,"flags":{"png":"https://flagcdn.com/w320/it.png","svg":"https://flagcdn.com/it.svg","emoji":"🇮🇹"},"languages":{"ita":"Italian"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"ITA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/365331"}},
+  {"name":{"common":"Japan","official":"Japan"},"capital":["Tokyo"],"region":"Asia","subregion":"Eastern Asia","population":125836021,"flags":{"png":"https://flagcdn.com/w320/jp.png","svg":"https://flagcdn.com/jp.svg","emoji":"🇯🇵"},"languages":{"jpn":"Japanese"},"currencies":{"JPY":{"name":"Japanese yen","symbol":"¥"}},"cca3":"JPN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/382313"}},
+  {"name":{"common":"Kenya","official":"Republic of Kenya"},"capital":["Nairobi"],"region":"Africa","subregion":"Eastern Africa","population":53771296,"flags":{"png":"https://flagcdn.com/w320/ke.png","svg":"https://flagcdn.com/ke.svg","emoji":"🇰🇪"},"languages":{"eng":"English","swa":"Swahili"},"currencies":{"KES":{"name":"Kenyan shilling","symbol":"Ksh"}},"cca3":"KEN","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192798"}},
+  {"name":{"common":"Malaysia","official":"Malaysia"},"capital":["Kuala Lumpur"],"region":"Asia","subregion":"South-Eastern Asia","population":32365999,"flags":{"png":"https://flagcdn.com/w320/my.png","svg":"https://flagcdn.com/my.svg","emoji":"🇲🇾"},"languages":{"msa":"Malay"},"currencies":{"MYR":{"name":"Malaysian ringgit","symbol":"RM"}},"cca3":"MYS","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/2108121"}},
+  {"name":{"common":"Mexico","official":"United Mexican States"},"capital":["Mexico City"],"region":"Americas","subregion":"North America","population":128932753,"flags":{"png":"https://flagcdn.com/w320/mx.png","svg":"https://flagcdn.com/mx.svg","emoji":"🇲🇽"},"languages":{"spa":"Spanish"},"currencies":{"MXN":{"name":"Mexican peso","symbol":"$"}},"cca3":"MEX","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/114686"}},
+  {"name":{"common":"Morocco","official":"Kingdom of Morocco"},"capital":["Rabat"],"region":"Africa","subregion":"Northern Africa","population":36910558,"flags":{"png":"https://flagcdn.com/w320/ma.png","svg":"https://flagcdn.com/ma.svg","emoji":"🇲🇦"},"languages":{"ara":"Arabic","ber":"Berber"},"currencies":{"MAD":{"name":"Moroccan dirham","symbol":"د.م."}},"cca3":"MAR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/3630439"}},
+  {"name":{"common":"Netherlands","official":"Kingdom of the Netherlands"},"capital":["Amsterdam"],"region":"Europe","subregion":"Western Europe","population":17441139,"flags":{"png":"https://flagcdn.com/w320/nl.png","svg":"https://flagcdn.com/nl.svg","emoji":"🇳🇱"},"languages":{"nld":"Dutch"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"NLD","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/47796"}},
+  {"name":{"common":"New Zealand","official":"New Zealand"},"capital":["Wellington"],"region":"Oceania","subregion":"Australia and New Zealand","population":5084300,"flags":{"png":"https://flagcdn.com/w320/nz.png","svg":"https://flagcdn.com/nz.svg","emoji":"🇳🇿"},"languages":{"eng":"English","mri":"Māori"},"currencies":{"NZD":{"name":"New Zealand dollar","symbol":"$"}},"cca3":"NZL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/556706"}},
+  {"name":{"common":"Nigeria","official":"Federal Republic of Nigeria"},"capital":["Abuja"],"region":"Africa","subregion":"Western Africa","population":206139589,"flags":{"png":"https://flagcdn.com/w320/ng.png","svg":"https://flagcdn.com/ng.svg","emoji":"🇳🇬"},"languages":{"eng":"English"},"currencies":{"NGN":{"name":"Nigerian naira","symbol":"₦"}},"cca3":"NGA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/192787"}}
+  ,{"name":{"common":"Norway","official":"Kingdom of Norway"},"capital":["Oslo"],"region":"Europe","subregion":"Northern Europe","population":5379475,"flags":{"png":"https://flagcdn.com/w320/no.png","svg":"https://flagcdn.com/no.svg","emoji":"🇳🇴"},"languages":{"nno":"Norwegian Nynorsk","nob":"Norwegian Bokmål"},"currencies":{"NOK":{"name":"Norwegian krone","symbol":"kr"}},"cca3":"NOR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/2978650"}},
+  {"name":{"common":"Pakistan","official":"Islamic Republic of Pakistan"},"capital":["Islamabad"],"region":"Asia","subregion":"Southern Asia","population":220892340,"flags":{"png":"https://flagcdn.com/w320/pk.png","svg":"https://flagcdn.com/pk.svg","emoji":"🇵🇰"},"languages":{"eng":"English","urd":"Urdu"},"currencies":{"PKR":{"name":"Pakistani rupee","symbol":"₨"}},"cca3":"PAK","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/307573"}},
+  {"name":{"common":"Peru","official":"Republic of Peru"},"capital":["Lima"],"region":"Americas","subregion":"South America","population":32971846,"flags":{"png":"https://flagcdn.com/w320/pe.png","svg":"https://flagcdn.com/pe.svg","emoji":"🇵🇪"},"languages":{"spa":"Spanish"},"currencies":{"PEN":{"name":"Peruvian sol","symbol":"S/."}},"cca3":"PER","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/288247"}},
+  {"name":{"common":"Philippines","official":"Republic of the Philippines"},"capital":["Manila"],"region":"Asia","subregion":"South-Eastern Asia","population":109581078,"flags":{"png":"https://flagcdn.com/w320/ph.png","svg":"https://flagcdn.com/ph.svg","emoji":"🇵🇭"},"languages":{"eng":"English","fil":"Filipino"},"currencies":{"PHP":{"name":"Philippine peso","symbol":"₱"}},"cca3":"PHL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/443174"}},
+  {"name":{"common":"Poland","official":"Republic of Poland"},"capital":["Warsaw"],"region":"Europe","subregion":"Central Europe","population":37950802,"flags":{"png":"https://flagcdn.com/w320/pl.png","svg":"https://flagcdn.com/pl.svg","emoji":"🇵🇱"},"languages":{"pol":"Polish"},"currencies":{"PLN":{"name":"Polish złoty","symbol":"zł"}},"cca3":"POL","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/49715"}},
+  {"name":{"common":"Portugal","official":"Portuguese Republic"},"capital":["Lisbon"],"region":"Europe","subregion":"Southern Europe","population":10305564,"flags":{"png":"https://flagcdn.com/w320/pt.png","svg":"https://flagcdn.com/pt.svg","emoji":"🇵🇹"},"languages":{"por":"Portuguese"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"PRT","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/295480"}},
+  {"name":{"common":"Romania","official":"Romania"},"capital":["Bucharest"],"region":"Europe","subregion":"Southeast Europe","population":19286123,"flags":{"png":"https://flagcdn.com/w320/ro.png","svg":"https://flagcdn.com/ro.svg","emoji":"🇷🇴"},"languages":{"ron":"Romanian"},"currencies":{"RON":{"name":"Romanian leu","symbol":"lei"}},"cca3":"ROU","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/90689"}},
+  {"name":{"common":"Russia","official":"Russian Federation"},"capital":["Moscow"],"region":"Europe","subregion":"Eastern Europe","population":144104080,"flags":{"png":"https://flagcdn.com/w320/ru.png","svg":"https://flagcdn.com/ru.svg","emoji":"🇷🇺"},"languages":{"rus":"Russian"},"currencies":{"RUB":{"name":"Russian ruble","symbol":"₽"}},"cca3":"RUS","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/60189"}},
+  {"name":{"common":"Saudi Arabia","official":"Kingdom of Saudi Arabia"},"capital":["Riyadh"],"region":"Asia","subregion":"Western Asia","population":34813871,"flags":{"png":"https://flagcdn.com/w320/sa.png","svg":"https://flagcdn.com/sa.svg","emoji":"🇸🇦"},"languages":{"ara":"Arabic"},"currencies":{"SAR":{"name":"Saudi riyal","symbol":"﷼"}},"cca3":"SAU","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/307584"}},
+  {"name":{"common":"South Africa","official":"Republic of South Africa"},"capital":["Pretoria"],"region":"Africa","subregion":"Southern Africa","population":59308690,"flags":{"png":"https://flagcdn.com/w320/za.png","svg":"https://flagcdn.com/za.svg","emoji":"🇿🇦"},"languages":{"afr":"Afrikaans","eng":"English","nbl":"Southern Ndebele","nso":"Northern Sotho","sot":"Southern Sotho","tsn":"Tswana","tso":"Tsonga","ven":"Venda","xho":"Xhosa","zul":"Zulu"},"currencies":{"ZAR":{"name":"South African rand","symbol":"R"}},"cca3":"ZAF","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/87565"}}
+  ,{"name":{"common":"South Korea","official":"Republic of Korea"},"capital":["Seoul"],"region":"Asia","subregion":"Eastern Asia","population":51780579,"flags":{"png":"https://flagcdn.com/w320/kr.png","svg":"https://flagcdn.com/kr.svg","emoji":"🇰🇷"},"languages":{"kor":"Korean"},"currencies":{"KRW":{"name":"South Korean won","symbol":"₩"}},"cca3":"KOR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/307756"}},
+  {"name":{"common":"Spain","official":"Kingdom of Spain"},"capital":["Madrid"],"region":"Europe","subregion":"Southern Europe","population":47351567,"flags":{"png":"https://flagcdn.com/w320/es.png","svg":"https://flagcdn.com/es.svg","emoji":"🇪🇸"},"languages":{"spa":"Spanish"},"currencies":{"EUR":{"name":"Euro","symbol":"€"}},"cca3":"ESP","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/1311341"}},
+  {"name":{"common":"Sweden","official":"Kingdom of Sweden"},"capital":["Stockholm"],"region":"Europe","subregion":"Northern Europe","population":10353442,"flags":{"png":"https://flagcdn.com/w320/se.png","svg":"https://flagcdn.com/se.svg","emoji":"🇸🇪"},"languages":{"swe":"Swedish"},"currencies":{"SEK":{"name":"Swedish krona","symbol":"kr"}},"cca3":"SWE","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/52822"}},
+  {"name":{"common":"Switzerland","official":"Swiss Confederation"},"capital":["Bern"],"region":"Europe","subregion":"Central Europe","population":8654622,"flags":{"png":"https://flagcdn.com/w320/ch.png","svg":"https://flagcdn.com/ch.svg","emoji":"🇨🇭"},"languages":{"deu":"German","fra":"French","gsw":"Swiss German","ita":"Italian","roh":"Romansh"},"currencies":{"CHF":{"name":"Swiss franc","symbol":"Fr."}},"cca3":"CHE","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/51701"}},
+  {"name":{"common":"Thailand","official":"Kingdom of Thailand"},"capital":["Bangkok"],"region":"Asia","subregion":"South-Eastern Asia","population":69799978,"flags":{"png":"https://flagcdn.com/w320/th.png","svg":"https://flagcdn.com/th.svg","emoji":"🇹🇭"},"languages":{"tha":"Thai"},"currencies":{"THB":{"name":"Thai baht","symbol":"฿"}},"cca3":"THA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/2067731"}},
+  {"name":{"common":"Turkey","official":"Republic of Turkey"},"capital":["Ankara"],"region":"Asia","subregion":"Western Asia","population":84339067,"flags":{"png":"https://flagcdn.com/w320/tr.png","svg":"https://flagcdn.com/tr.svg","emoji":"🇹🇷"},"languages":{"tur":"Turkish"},"currencies":{"TRY":{"name":"Turkish lira","symbol":"₺"}},"cca3":"TUR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/174737"}},
+  {"name":{"common":"Ukraine","official":"Ukraine"},"capital":["Kyiv"],"region":"Europe","subregion":"Eastern Europe","population":44134693,"flags":{"png":"https://flagcdn.com/w320/ua.png","svg":"https://flagcdn.com/ua.svg","emoji":"🇺🇦"},"languages":{"ukr":"Ukrainian"},"currencies":{"UAH":{"name":"Ukrainian hryvnia","symbol":"₴"}},"cca3":"UKR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/60199"}},
+  {"name":{"common":"United Arab Emirates","official":"United Arab Emirates"},"capital":["Abu Dhabi"],"region":"Asia","subregion":"Western Asia","population":9890400,"flags":{"png":"https://flagcdn.com/w320/ae.png","svg":"https://flagcdn.com/ae.svg","emoji":"🇦🇪"},"languages":{"ara":"Arabic"},"currencies":{"AED":{"name":"United Arab Emirates dirham","symbol":"د.إ"}},"cca3":"ARE","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/307763"}},
+  {"name":{"common":"United Kingdom","official":"United Kingdom of Great Britain and Northern Ireland"},"capital":["London"],"region":"Europe","subregion":"Northern Europe","population":67215293,"flags":{"png":"https://flagcdn.com/w320/gb.png","svg":"https://flagcdn.com/gb.svg","emoji":"🇬🇧"},"languages":{"eng":"English"},"currencies":{"GBP":{"name":"British pound","symbol":"£"}},"cca3":"GBR","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/62149"}},
+  {"name":{"common":"United States","official":"United States of America"},"capital":["Washington, D.C."],"region":"Americas","subregion":"Northern America","population":329484123,"flags":{"png":"https://flagcdn.com/w320/us.png","svg":"https://flagcdn.com/us.svg","emoji":"🇺🇸"},"languages":{"eng":"English"},"currencies":{"USD":{"name":"United States dollar","symbol":"$"}},"cca3":"USA","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/148838"}},
+  {"name":{"common":"Vietnam","official":"Socialist Republic of Vietnam"},"capital":["Hanoi"],"region":"Asia","subregion":"South-Eastern Asia","population":97338579,"flags":{"png":"https://flagcdn.com/w320/vn.png","svg":"https://flagcdn.com/vn.svg","emoji":"🇻🇳"},"languages":{"vie":"Vietnamese"},"currencies":{"VND":{"name":"Vietnamese đồng","symbol":"₫"}},"cca3":"VNM","maps":{"openStreetMaps":"https://www.openstreetmap.org/relation/49915"}}
 ]

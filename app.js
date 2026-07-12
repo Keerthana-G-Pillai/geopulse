@@ -5,7 +5,8 @@
    ========================================================================== */
 
 // ── Constants ────────────────────────────────────────────────────────────────
-const API_URL = '/api/v3.1/all?fields=name,capital,region,subregion,population,flags,languages,currencies,cca3,maps';
+const API_PROXY_URL = '/api/v3.1/all?fields=name,capital,region,subregion,population,flags,languages,currencies,cca3,maps';
+const API_LOCAL_URL = '/countries.json'; // fallback
 const LS_FAV_KEY      = 'geopulse_favorites';
 const LS_SETTINGS_KEY = 'geopulse_settings';
 
@@ -82,9 +83,23 @@ const StorageController = {
 // ── Fetch API ─────────────────────────────────────────────────────────────────
 const FetchController = {
   async fetchCountries() {
-    const res = await fetch(API_URL);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+    let data = null;
+
+    // Try live API via Vite proxy first
+    try {
+      const res = await fetch(API_PROXY_URL);
+      const text = await res.text();
+      // Guard: make sure we got JSON not an HTML error page
+      if (!res.ok || text.trim().startsWith('<')) throw new Error('Non-JSON response from proxy');
+      data = JSON.parse(text);
+    } catch (proxyErr) {
+      console.warn('Proxy fetch failed, falling back to local data:', proxyErr.message);
+      // Fallback to bundled local JSON
+      const res = await fetch(API_LOCAL_URL);
+      if (!res.ok) throw new Error(`Local fallback failed: HTTP ${res.status}`);
+      data = await res.json();
+    }
+
     state.countries = data;
     state.filtered  = [...data];
     return data;
