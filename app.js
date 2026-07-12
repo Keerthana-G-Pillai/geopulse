@@ -16,7 +16,7 @@ let state = {
   filtered: [],
   favorites: [],          // array of cca3 strings
   settings: {
-    theme: 'dark',
+    theme: 'light',
     voiceName: '',
     speechRate: 1.0,
     speechPitch: 1.0
